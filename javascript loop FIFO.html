@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script src="./demo.js"></script>
+<script>
+	let circularQueue = new MyCircularQueue(3);
+	circularQueue.Rear();  // 返回 -1
+	circularQueue.enQueue(2);  // 返回 true
+	circularQueue.enQueue(3);  // 返回 true
+	circularQueue.enQueue(4);  // 返回 true
+	circularQueue.Rear();  // 返回 4
+	circularQueue.isFull();  // 返回 true
+	circularQueue.deQueue();  // 返回 true
+	circularQueue.enQueue(4);  // 返回 true
+</script>
