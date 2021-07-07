@@ -1,16 +1,22 @@
 /**
- * @param {number} k
+ * @desc created constructor
+ * @param { number } k length
  */
 var MyCircularQueue = function(k) {
+	// queue length	
 	this.length = k;
+	// queue
 	this.queue = new Array(k);
+	// front index	
 	this.front = -1;
+	// rear index
 	this.tail = -1;
 };
 
 /** 
- * @param {number} value
- * @return {boolean}
+ * @desc add value to quque
+ * @param { number } value
+ * @return { boolean }
  */
 MyCircularQueue.prototype.enQueue = function(value) {
 	if (this.isFull()) {
@@ -26,6 +32,7 @@ MyCircularQueue.prototype.enQueue = function(value) {
 };
 
 /**
+ * @desc del value
  * @return {boolean}
  */
 MyCircularQueue.prototype.deQueue = function() {
@@ -43,6 +50,7 @@ MyCircularQueue.prototype.deQueue = function() {
 };
 
 /**
+ * @desc get queue front value
  * @return {number}
  */
 MyCircularQueue.prototype.Front = function() {
@@ -54,6 +62,7 @@ MyCircularQueue.prototype.Front = function() {
 };
 
 /**
+ * @desc get queue rear value
  * @return {number}
  */
 MyCircularQueue.prototype.Rear = function() {
@@ -65,6 +74,7 @@ MyCircularQueue.prototype.Rear = function() {
 };
 
 /**
+ * @desc judge queue isempty
  * @return {boolean}
  */
 MyCircularQueue.prototype.isEmpty = function() {
@@ -76,6 +86,7 @@ MyCircularQueue.prototype.isEmpty = function() {
 };
 
 /**
+ * @desc judge queue isfull
  * @return {boolean}
  */
 MyCircularQueue.prototype.isFull = function() {
@@ -85,14 +96,3 @@ MyCircularQueue.prototype.isFull = function() {
 		return false;
 	}
 };
-
-/**
- * Your MyCircularQueue object will be instantiated and called as such:
- * var obj = new MyCircularQueue(k)
- * var param_1 = obj.enQueue(value)
- * var param_2 = obj.deQueue()
- * var param_3 = obj.Front()
- * var param_4 = obj.Rear()
- * var param_5 = obj.isEmpty()
- * var param_6 = obj.isFull()
- */
